@@ -24,9 +24,6 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr 0.5fr 1.5fr;
 }
-.tst {
-    border: solid 1px;
-}
 
 .pricing {
     >div {
