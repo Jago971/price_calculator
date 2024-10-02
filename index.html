@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>title</title>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="slide-container flex">
-        <div class="slide-body">
-            <div class="pricing flex tst">
-                <div class="pageviews flex tst">
-                    <p>AMOUNT</p>
-                    <p>&nbspPAGEVIEWS</p>
-                </div>
-                <div class="price flex tst">
-                    <H1>$AMOUNT</H1>
-                    <p>/ monthly</p>
-                </div>
-            </div>
-            <div class="slide flex tst">
-                <input type="range" min="1" max="100" value="50" class="slider" id="slider">
-            </div>
-            <div class="options flex tst">
-                <p>monthly / yearly</p>
-                <label class="switch">
-                    <input id="yearly" type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-            <div class="start tst"></div>
+      <div class="slide-body">
+        <div class="pricing flex tst">
+          <div class="pageviews flex tst">
+            <p>AMOUNT</p>
+            <p>&nbspPAGEVIEWS</p>
+          </div>
+          <div class="price flex tst">
+            <h1>$AMOUNT</h1>
+            <p>/ monthly</p>
+          </div>
         </div>
+        <div class="slide flex tst">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="slider"
+          />
+        </div>
+        <div class="options flex tst">
+          <p>monthly / yearly</p>
+          <label class="switch">
+            <input id="yearly" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="start tst"></div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
