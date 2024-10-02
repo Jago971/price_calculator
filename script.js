@@ -3,22 +3,11 @@ const pageViews = document.querySelector(".pageviews>p:first-of-type")
 const price = document.querySelector(".price>h1")
 const monthYear = document.querySelector(".price>p")
 const yearly = document.getElementById("yearly")
+
 let isYearly = false;
 
 pageViews.innerHTML = getPageViews(slider.value)
 price.innerHTML = `$${getPrice(slider.value)}.00`
-
-yearly.addEventListener("click", () => {
-    if(yearly.checked == true) {
-        isYearly = true
-        price.innerHTML = `$${getPrice(slider.value)}.00`
-        monthYear.innerHTML = `&nbsp/ ${monthOrYear(isYearly)}`
-    } else {
-        isYearly = false
-        price.innerHTML = `$${getPrice(slider.value)}.00`
-        monthYear.innerHTML = `&nbsp/ ${monthOrYear(isYearly)}`
-    }
-})
 
 function monthOrYear(isYearly) {
     if(isYearly) {
@@ -27,12 +16,6 @@ function monthOrYear(isYearly) {
         return 'monthly'
     }
 }
-
-slider.addEventListener("change", () => {
-    pageViews.innerHTML = getPageViews(slider.value)
-    price.innerHTML = `$${getPrice(slider.value)}.00`
-    monthYear.innerHTML = `&nbsp/ ${monthOrYear(isYearly)}`
-})
 
 function getPageViews(value) {
     if (value == 100) {
@@ -79,3 +62,21 @@ function getPrice(value) {
 function yearlyBilling (value) {
     return value * 0.75 * 12
 }
+
+slider.addEventListener("change", () => {
+    pageViews.innerHTML = getPageViews(slider.value)
+    price.innerHTML = `$${getPrice(slider.value)}.00`
+    monthYear.innerHTML = `&nbsp/ ${monthOrYear(isYearly)}`
+})
+
+yearly.addEventListener("click", () => {
+    if(yearly.checked == true) {
+        isYearly = true
+        price.innerHTML = `$${getPrice(slider.value)}.00`
+        monthYear.innerHTML = `&nbsp/ ${monthOrYear(isYearly)}`
+    } else {
+        isYearly = false
+        price.innerHTML = `$${getPrice(slider.value)}.00`
+        monthYear.innerHTML = `&nbsp/ ${monthOrYear(isYearly)}`
+    }
+})
