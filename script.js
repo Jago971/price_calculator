@@ -32,21 +32,21 @@ const price = document.querySelector(".price>h1");
 const monthYear = document.querySelector(".price>p");
 const yearly = document.getElementById("yearly");
 
-pageViews.innerHTML = getPageViews(slider.value);
-price.innerHTML = `$${getPrice(slider.value)}.00`;
+pageViews.textContent = getPageViews(slider.value);
+price.textContent = `$${getPrice(slider.value)}.00`;
 
 slider.addEventListener("change", () => {
-  pageViews.innerHTML = getPageViews(slider.value);
-  price.innerHTML = `$${getPrice(slider.value)}.00`;
+  pageViews.textContent = getPageViews(slider.value);
+  price.textContent = `$${getPrice(slider.value)}.00`;
 });
 
 yearly.addEventListener("click", () => {
   if (yearly.checked == true) {
     let priceFinalv2 = yearlyBilling(getPrice(slider.value));
-    price.innerHTML = `$${priceFinalv2}.00`;
-    monthYear.innerHTML = "&nbsp/ yearly";
+    price.textContent = `$${priceFinalv2}.00 `;
+    monthYear.textContent = "/ yearly";
   } else {
-    price.innerHTML = `$${getPrice(slider.value)}.00`;
-    monthYear.innerHTML = "&nbsp/ monthly";
+    price.textContent = `$${getPrice(slider.value)}.00 `;
+    monthYear.textContent = "/ monthly";
   }
 });
